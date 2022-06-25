@@ -1,0 +1,32 @@
+DROP DATABASE IF EXISTS coc;
+CREATE DATABASE coc;
+CREATE TABLE users(
+    userID INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    userType VARCHAR(50) NOT NULL,
+    dateJoined VARCHAR(50) NOT NULL 
+);
+CREATE TABLE complaint(
+    complaintID INT PRIMARY KEY AUTO_INCREMENT,
+    details VARCHAR(500) NOT NULL,
+    suggestion VARCHAR(500) NOT NULL,
+    number VARCHAR(11) NOT NULL,
+    userID INT NOT NULL
+);
+CREATE TABLE applicant(
+    applicantID INT PRIMARY KEY AUTO_INCREMENT,
+    userID INT NOT NULL
+);
+CREATE TABLE forward(
+    forwardID INT PRIMARY KEY AUTO_INCREMENT,
+    complaintID INT NOT NULL,
+    userID INT NOT NULL
+);
+CREATE TABLE POST(
+    postID INT PRIMARY KEY AUTO_INCREMENT,
+    subject VARCHAR(500) NOT NULL,
+    details VARCHAR(500) NOT NULL
+);

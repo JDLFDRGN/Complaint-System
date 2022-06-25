@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" sizes="16x16">
+</head>
+<body>
+    <?php
+        session_start();
+        session_unset();
+        session_destroy();
+    ?>  
+    <nav class="login-header">
+        <h2 class="login-header-title">Chatime Online Complaint</h2>
+    </nav>  
+    <section class="login-section">
+        <form method="post" id="login-form-user" class="login-form" action="validate.php">
+            <div class="login-for">
+                <h1 class="modern-border">USER</h1>
+            </div>
+            <div class="login-inputs">
+                <input type="email" placeholder="Email" name="email" class="classic-border input-highlight" required>
+                <input type="password" placeholder="Password" name="password" class="classic-border input-highlight" required>
+            </div>      
+            <div class="login-buttons">
+                <input type="submit" value="log in" class="modern-border button-design1" name="login-user">
+                <input type="button" value="sign up" class="modern-border button-design2" onclick="navigate('signup.php')">
+            </div>      
+        </form>
+        <div class="login-navigate">
+            <input type="button" value="admin" class="modern-border button-design2" onclick="navigate('admin.php')">
+            <input type="button" value="manager" class="modern-border button-design2" onclick="navigate('manager.php')">
+        </div>
+    </section>
+    <footer class="footer1">
+        <div class="copyright">
+            &copy2020Chatime Online Complaint
+        </div>
+        <div class="follow-us">
+            <p>FOLLOW US</p>
+            <div class="follow-us-image">
+                <img src="img/icon/facebook.svg">
+                <img src="img/icon/instagram.svg">
+                <img src="img/icon/twitter.svg">
+            </div>
+        </div>
+        <div class="privacy-policy">
+            PRIVACY POLICY
+        </div>
+    </footer>
+</body>
+</html>

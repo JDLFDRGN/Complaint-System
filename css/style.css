@@ -1,0 +1,747 @@
+/*General Settings*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Rubik+Moonrocks&display=swap');
+:root{
+    --roboto-font: 'Roboto', sans-serif;
+    --login-header-font: 'Rubik Moonrocks', cursive;
+    --white: #f7f9fb;
+    --footer-color: #062d30;
+    --purple: #990099;
+    --pink: #ffb9c5;
+    --skyblue: #00b6bf;
+    --navy: #051728;
+    --purple-gradient: linear-gradient(45deg, #990099,  #00b6bf);
+    --green-blue: #115c4a;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-style: none;
+    outline: none;
+    text-decoration: none;
+    color: black;
+    font-family: var(--roboto-font);
+    resize: none;
+}
+body{
+    background-color: var(--white);
+}
+input[type='button']:hover,
+input[type='submit']:hover,
+button:hover{
+    cursor: pointer;
+}
+.modern-border{
+    border-radius: 20%;
+}
+.classic-border{
+    border-radius: 10px;
+}
+.button-design1{
+    border: 3px solid var(--purple);
+    background-color: var(--white);
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: var(--purple);
+}
+.button-design2{
+    background-image: var(--purple-gradient);
+    font-weight: bolder;
+    color: var(--white);
+    text-transform: capitalize;
+}
+.button-design1:hover{
+    background-image: var(--purple-gradient);
+    color: var(--white);
+}
+.button-design2:hover{
+    color: var(--pink);
+}
+.input-highlight:focus{
+    box-shadow: 2px 2px 2px var(--skyblue);
+    border: 1px solid var(--skyblue);
+}
+.no-data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.move-to-right{
+    transform: translateX(20%) rotateZ(-45deg);
+}
+/*Login Settings*/
+.login-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    position: relative;
+    justify-content: center;
+}
+.login-header{
+    height: 30vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--purple);
+}
+.login-header-title{
+    font-size: 4em;
+    width: 40%;
+    text-align: center;
+    font-family: var(--login-header-font);
+    color: var(--pink);
+}
+.login-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.login-inputs>input{
+    padding: .5em 0 .5em .5em;
+    font-size: 1.3em;
+    margin-top: 1.5em;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+.login-form{
+    height: fit-content;
+    width: 20em;
+}
+.login-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.login-buttons>input{
+    width: 40%;
+    padding: 1em 0;
+}
+.login-navigate{
+    position: absolute;
+    left: 2em;
+    bottom: 2em;
+}
+.login-navigate>input{
+    width: 8em;
+    padding: .8em 0;
+    margin-right: 1em;
+}
+.login-for{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.login-for>h1{
+    width: fit-content;
+    padding: 0.2em;
+}
+
+/*SignUp Settings*/
+#signup-section{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+#signup-form{
+    border: 1px solid rgba(0, 0, 0, .2);
+    width: fit-content;
+    padding: 1em;
+    background-color: var(--green-blue);
+}
+#signup-form *:not(input){
+    color: var(--white);
+}
+#signup-form input[type='text'],
+#signup-form input[type='email'],
+#signup-form input[type='password']{
+    padding: .5em 0 .5em 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+#signup-email{
+    width: 100%;
+}
+#signup-show-passwords{
+    margin: 1em 0 0 .5em;
+}
+#signup-form>div{
+    display: flex;
+    align-items: center;
+}
+#signup-form>*:nth-child(-n+4):nth-child(n+2){
+    margin-top: 1.5em;
+}
+#signup-buttons{
+    justify-content: space-around;
+    margin-top: 6em;
+}
+#signup-buttons>input{
+    width: 40%;
+    padding: .5em 0;
+}
+/*Admin Setiings*/
+.admin-section{
+    min-height: 100vh;
+}
+#admin-sidebar{
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    padding: .5em;
+    background-color: var(--navy);
+}
+#admin-sidebar>h1{
+    text-align: center;
+    margin: 3em 0;
+    text-transform:uppercase;
+}
+#admin-sidebar * {
+    color: var(--white);
+}
+.admin-section{
+    padding-left: 22%;
+}
+#admin-navigations>div{
+    font-size: 1.5em;
+    padding: 1em 0 1em .5em;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--white);
+}
+#admin-navigations img{
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .5em;
+}
+#admin-navigations>div:hover{
+    cursor: pointer;
+    transform: translateX(20px);
+}
+#admin-accounts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;  
+}
+#admin-accounts>div{
+    width: 48%;
+    text-align: center;
+    padding: 1.5em 0;
+    height: fit-content;
+}
+#admin-accounts a {
+    color: var(--white);
+    text-transform: capitalize;
+}
+#admin-accounts a:hover{
+    text-decoration: underline;
+}
+#admin-total-users{
+    background-color: var(--skyblue);
+}
+#admin-total-managers{
+    background-color: var(--pink);
+}
+#admin-introduction1{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+}
+#admin-introduction1>div{
+    height: 100%;
+    width: 50%;
+}
+#admin-update{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#admin-update>div>*:nth-child(2){
+    border: 1px solid rgba(0, 0, 0, .2);
+    width: 100%;
+    padding: .5em 0 .5em .5em;
+    resize: none;
+    margin-top: 1em;
+}
+#admin-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#admin-post-form{
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: white;
+    width: 94%;
+    height: 94%;
+    padding: 1em;
+}
+#admin-post-form>h3{
+    height: 20%;
+}
+#admin-post-form-inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    height: 80%;
+    justify-content: space-between;
+}
+#admin-post-form-inputs>input:nth-child(-n+2){
+    padding: .5em 0 .5em .3em;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+#admin-submit-post{
+    padding: 1em 0;
+}
+#admin-registered-user,
+#admin-registered-manager{
+    width: fit-content;
+    padding: 1em;
+    margin-top: 2em;
+}
+#admin-user-list,
+#admin-manager-list{
+    width: 97%;
+    height: 78vh;
+    margin-top: 1em;
+    border: 2px solid var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+.admin-list-header{
+    background-color: var(--purple);
+    padding: 1em 0 1em .5em;
+    align-self: baseline;
+    width: 100%;
+}
+.admin-user{
+    border-bottom: 1px solid var(--purple);
+    width: 96%;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-view-user,
+.admin-view-manager{
+    width: 7em;
+    padding: .5em 0;
+}
+#admin-user-view-popup{
+    width: 30%;
+    height: 70vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: var(--white);
+    overflow: hidden;
+}
+#admin-user-fullname-header{
+    background-color: var(--skyblue);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding: 1em 0 1em 0.5em;
+}
+#admin-user-credentials{
+    padding: 1em;
+}
+#admin-user-credentials>div:not(:nth-child(4)){
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    font-size: 1.3em;
+    padding: .5em 0 .5em .5em;
+}
+#admin-user-view-fullname{
+    color: var(--white);
+}
+#admin-user-view-buttons{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#admin-user-view-buttons>input{
+    width: 6em;
+    font-size: 1.5em;
+    padding: 0.3em 0;
+}
+.admin-hide-view-form{
+    display: none !important;
+}
+.admin-list-header>h1{
+    color: var(--white);
+}
+/*Request Settings*/
+#request-section>h1{
+    padding: 1em 0;
+}
+#request-list{
+    height: 80vh;
+    width: 95%;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: white;
+    padding: .5em;
+    position: relative;
+}
+.request-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding: 1em;
+    align-items: center;
+}
+.request-buttons>input{
+    width: 7em;
+    padding: .5em 0;
+    margin-left: 1em;
+}
+#respond-form{
+    border: 1px solid rgba(0, 0, 0, .2);
+    width: 30%;
+    height: 70vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--white);
+}
+#respond-form>h1:nth-child(1){
+    width: 92%;
+    text-align: justify;
+}
+#respond-form>input[type='text']{
+    padding: .5em 0 .5em .5em;
+    width: 30%;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+#respond-form-buttons>input{
+    width: 7em;
+    padding: .5em 0;
+}
+.hide-respond-form{
+    display: none !important;
+}
+/*Inbox Settings*/
+#inbox-section{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    width: 98%;
+}
+.inbox-row{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inbox-container{
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: white;
+    height: 98vh;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
+.inbox-forward-button{
+    font-size: 1.5em;
+    padding: .5em 0;
+}
+.inbox-detail-container>p,
+.inbox-suggestion-container>p{
+    text-align: justify;
+}
+.inbox-container>div>div{
+    margin-bottom: 1em;
+}
+#forward-form{
+    border: 1px solid rgba(0, 0, 0, .2);
+    height: 70vh;
+    width: 30%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#forward-form>select{
+    padding: .5em;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+#forward-buttons>input{
+    width: 7em;
+    padding: .5em 0;
+    margin: 0 1em;
+}
+.hide-forward-form{
+    display: none !important;
+}
+/*User Settings*/
+.user-home-header{
+    height: 10vh;
+    display: flex;
+    background-color: var(--navy);
+}
+.user-home-header>div{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 .5em;
+}
+.user-left-navigation *{
+    color: var(--white);
+}
+.user-left-navigation>span{
+    width: 10em;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid var(--white);
+}
+.user-left-navigation>span>a:hover{
+    text-decoration: underline;
+}
+.user-right-navigation>input{
+    width: 7em;
+    padding: 1em 0;
+    margin-left: auto;
+}
+#how-to-use-section{
+    height: 90vh;
+}
+#how-to-use-section p{
+    color: var(--white);
+    font-weight: bolder;
+}
+#user-steps{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0 5em;
+}
+#user-steps>div{
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0, .2);
+    margin-top: 1em ;
+}
+#user-steps>div>img{
+    width: 60%;
+    height: 100%;
+}
+#user-steps>div>p{
+    text-align: justify;
+    padding-left: 1em;
+}
+#user-first-step{
+    align-self: baseline;
+    background-color: var(--skyblue);
+}
+#user-second-step{
+    align-self: flex-end;
+    background-color: var(--purple);
+}
+/*Apply Settings*/
+#apply-section{
+    display: grid;
+    place-items: center;
+    height: 90vh;
+}
+#apply-form{
+    border: 1px solid rgba(0, 0, 0, .2);
+    height: 80vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--green-blue);
+}
+#apply-form *{
+    color: var(--white);
+}
+#apply-form>h1{
+    width: 90%;
+    text-align: justify;
+    font-size: 1.5em;
+}
+#apply-submit-button{
+    width: 8em;
+    padding: 1em 0;
+}
+#apply-radio-answers>div>label{
+    margin: .5em;
+    font-weight: bolder;
+}
+
+/*User Add Complaint Settings*/
+#add-complaint-section{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#complaint-let-us-know{
+    width: 100%;
+    padding: 1em;
+}
+#complaint-add-form{
+    height: 80vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: var(--green-blue);
+    margin-bottom: 1em;
+    padding: 1em;
+}
+#complaint-add-form>div{
+    display: flex;
+    flex-direction: column;
+}
+#complaint-add-form b{
+    color: var(--white);
+}
+#complaint-add-form>div>*:nth-child(2){
+    padding: .5em 0 .5em .5em;
+    margin-top: .5em;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+#submit-add-complaint{
+    width: 7em;
+    padding: .5em;
+}
+/*Manager Settings*/
+#manager-home-section{
+    height: fit-content !important;
+    margin-bottom: 1em;
+    min-height: 100vh;
+}
+#manager-sidebar{
+    height: 100vh;
+    width: 25%;
+    padding: .5em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--navy);
+}
+#manager-sidebar * {
+    color: var(--white);
+}
+#manager-account{
+    width: 100%;
+    text-align: center;
+}
+#manager-account>img{
+    height: 5em;
+    width: 5em;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+.manager-navigation{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--white);
+}
+.manager-navigation:hover{
+    transform: translateX(20px);
+}
+.manager-navigation>img{
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .5em;
+}
+#manager-name{
+    margin: 1em 0 2em 0;
+    font-weight: bolder;
+}
+#manager-sidebar>div{
+    padding: 1em 0 1em .5em;
+}
+#manager-sidebar>div:hover{
+    cursor: pointer;
+}
+#manager-complaint-section{
+    padding-left: 30%;
+    width: 98%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+}
+#manager-home-section{
+    padding-left: 30%;
+    width: 96%;
+    height: 100vh;
+}
+#manager-recent-complaint{
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: white;
+    margin-top: 1em;
+    padding: .5em;
+}
+#manager-admin-post{
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    position: relative;
+    min-height: 70vh;
+}
+.post-container{
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: white;
+    padding: 1em;
+    min-height: 40vh;
+}
+.post-container>*{
+    margin-bottom: 1em;
+}
+/*Footer Settings*/
+.footer1{
+    height: 20vh;
+    background-color: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+.footer1 * {
+    color: whitesmoke;
+}
+.footer1 img{
+    height: 1em;
+    width: 1em;
+}
+.follow-us{
+    text-align: center;
+}
+.footer2{
+    height: 20vh;
+    background-color: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer2 *{
+    color: whitesmoke;
+}
