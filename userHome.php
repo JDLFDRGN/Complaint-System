@@ -9,7 +9,7 @@
     <script src="js/script.js"></script>
     <link rel="shortcut icon" type="image/png" href="img/logo.png" sizes="16x16">
 </head>
-<body>  
+<body>
     <nav class="user-home-header">
         <div class="user-left-navigation">
             <span><a href="userHome.php">home</a></span>
